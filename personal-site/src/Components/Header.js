@@ -8,6 +8,7 @@ import {
 import Contact from './Contact';
 import AboutMe from './AboutMe';
 import Home from './Home';
+import Images from './Images';
 import './Style/Main.css';
 
 const Header = (props) => {
@@ -22,6 +23,7 @@ const Header = (props) => {
           <li className="links"><Link to="/">Home</Link></li>
           <li className="links"><Link to="/about">About</Link></li>
           <li className="links"><Link to="/contact">Contact</Link></li>
+          <li className="links"><Link to="/images">Digital Work</Link></li>
         </ul>
           <ul className="nav navbar-nav navbar-right">
             <li className="name">Race Carpenter</li>
@@ -30,9 +32,12 @@ const Header = (props) => {
     </div>
   </nav>
     <div className="main">
-        <Route exact path="/" component={Home}/>
-        <Route path="/about" component={AboutMe}/>
-        <Route path="/contact" component={Contact}/>
+     <div className="jumbotron">
+      <Route exact path="/" component={Home}/>
+      <Route path="/about" component={AboutMe}/>
+      <Route path="/contact" component={Contact}/>
+      <Route path="/images" component={Images}/>
+     </div>
     </div>
    </div>
   </Router>
